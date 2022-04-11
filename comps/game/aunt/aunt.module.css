@@ -34,6 +34,7 @@
 
     width: 100%;
     text-align: center;
+
 }
 
 .rs_image{
@@ -48,17 +49,44 @@
     width: 100%;
     height: 100%;
     border: solid red 1px;
+    position: relative;
 }
 
 .recipe_card_container {
+    padding-left: 0px;
+    padding-top: 0px;
     width: 100%;
     height: 100%;
     border: solid red 1px;
+    font-family: Cursive, "Lucida Handwriting";
+    font-size: 100px;
+    border: 2px dashed #333;
+    position: relative;
+
 }
 
-.fs_aunt_container {
+.rc_text{
     margin: auto;
-    width: 115px;
-    height: 330px;
-    position: relative;
+    padding-left: 100px;
+    padding-top: 50px;
+    width: 100%;
+    height: 20%;
+    position:absolute;
+}
+
+.cook_button{
+    background-color: lightblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    border-radius: 8px;
+
+
+
+
 }
