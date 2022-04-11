@@ -55,7 +55,15 @@ export default function Aunt ({backToMap}) {
         return(
             //TODO: remove red border from recipe_card_container when done
             <div className={style.recipe_card_container}>
-
+                
+                <Image
+                    layout="fill"
+                    src={"/img/aunt_house/recipe_card.png"}
+                    priority = {true}
+                    
+                    />
+                    <div className = {style.rc_text}>
+                    
                 {/* TODO: Make small recipe card look nice */}
                 <p>{recipe.name[lang]}</p>
                 <p>{lang == "en" ?"Instructions: " : "Instrucciones: "}{recipe.instructions[lang]}</p>
@@ -64,10 +72,10 @@ export default function Aunt ({backToMap}) {
                     <p key={ing[lang]}>
                         {ing.amount == "" ? ing[lang] : ing.amount + " " + ing[lang]}
                     </p>);})}
-
+                
                 {/* TODO: Translate Cook in spanish */}
-                <button onClick={() => setState("basic_game")}>{lang == "en" ? "Cook!" : "Cook! but in spanish"}</button>
-
+                <button className = {style.cook_button} onClick={() => setState("basic_game")}>{lang == "en" ? "Cook!" : "¡Cocína!"}</button>
+                </div>
             </div>
         )
     }
@@ -78,13 +86,22 @@ export default function Aunt ({backToMap}) {
             //TODO: remove red border from small_recipe_card_container when done
             <div className={style.small_recipe_card_container}>
                 {/* TODO: Make small recipe card look nice */}
+                
+                <Image
+                    layout = 'fill'
+                    src={"/img/aunt_house/recipe_card.png"}
+                    priority = {true}
+                    />
+                <div className = {style.rc_text}>
+                
                 <p>{recipe.name[lang] + " (" + recipe.serving_amount[lang] + ")"}</p>
                 {recipe.ingredients.map((ing) => {
                                 return(
                                     <p key={ing[lang]}>{ing.amount + " " + ing[lang]}</p>
                                 );
                 })}
-
+                
+                </div>
             </div>
         )
     }
